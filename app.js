@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv://hardikgandhi:<password>@cluster0.4ydhftd.mongodb.net/?retryWrites=true&w=majority", {
+  .connect("mongodb+srv://<username>:<password>@cluster0.4ydhftd.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
   })
   .then(() => console.log("MongoDB Connected"))

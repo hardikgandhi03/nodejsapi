@@ -1,0 +1,9 @@
+sudo yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
+sudo yum install -y nodejs
+sudo yum install -y git
+git clone https://github.com/hardikgandhi03/nodejsapi.git
+cd nodejsapi
+npm i
+sudo yum update
+node app.js
