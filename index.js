@@ -2,11 +2,11 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv://username:pswd@cluster0.4ydhftd.mongodb.net/?retryWrites=true&w=majority", {
+  .connect("mongodb+srv://hardikgandhi:<password>@cluster0.4ydhftd.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
   })
   .then(() => console.log("MongoDB Connected"))
@@ -36,7 +36,7 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-const User = mongoose.model("users", userSchema);
+const User = mongoose.model("Accounts", userSchema);
 
 app.use(express.json());
 
@@ -89,7 +89,7 @@ app.get("/user/:id", async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("WelCome To Airmeet");
+  res.send("Welcome!");
 });
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
